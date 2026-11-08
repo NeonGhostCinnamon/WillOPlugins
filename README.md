@@ -9,7 +9,6 @@
 
 <br><br>
 
-<img src="images/readme/plugins.svg" alt="The plugins" width="100%">
 
 <a href="https://github.com/NeonGhostCinnamon/WillOPatchwisp"><img src="https://raw.githubusercontent.com/NeonGhostCinnamon/WillOPatchwisp/HEAD/images/icon.png" alt="Will-o-Patchwisp icon" width="96"></a>
 
