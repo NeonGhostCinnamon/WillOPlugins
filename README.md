@@ -18,8 +18,5 @@ One Dalamud custom repository for all of Will o' Cinnamon's FFXIV plugins:
 
 3. Type `/xlplugins` and install **Will-o-Patchwisp** and/or **Will-o-Muter**.
 
-## How this repository works (for the author)
-
-`repo.json` is built automatically from each plugin's own `repo.json` (listed in `sources.json`) every 30 minutes.
-After releasing a plugin you can also open **Actions → Update plugin list → Run workflow** to update it right away.
-To add another plugin later, add a line to `sources.json`.
+## AI Usage:
+AI was used to help create plugins
