@@ -1,4 +1,5 @@
 [
   { "InternalName": "WillOPatchwisp", "Url": "https://raw.githubusercontent.com/NeonGhostCinnamon/WillOPatchwisp/HEAD/repo.json" },
-  { "InternalName": "WillOMuter",     "Url": "https://raw.githubusercontent.com/NeonGhostCinnamon/WillOMuter/HEAD/repo.json" }
+  { "InternalName": "WillOMuter",     "Url": "https://raw.githubusercontent.com/NeonGhostCinnamon/WillOMuter/HEAD/repo.json" },
+  { "InternalName": "WillOBars",   "Url": "https://raw.githubusercontent.com/NeonGhostCinnamon/WillOBars/HEAD/repo.json" }
 ]

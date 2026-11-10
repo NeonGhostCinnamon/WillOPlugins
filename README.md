@@ -24,6 +24,14 @@ Patch notes for your Dalamud plugins: changelogs when they update, one-click upd
 
 Mutes the ambient sounds when a crowd gathers around you,<br>and brings them back once it thins out.
 
+<br>
+
+<a href="https://github.com/NeonGhostCinnamon/WillOBars"><img src="https://raw.githubusercontent.com/NeonGhostCinnamon/WillOBars/HEAD/images/icon.png" alt="Will-o-Bars icon" width="96"></a>
+
+### [Will-o-Bars](https://github.com/NeonGhostCinnamon/WillOBars)
+
+Shows or hides your hotbars depending on your class or job,<br>with backups of all your hotbars so you can always go back.
+
 </div>
 
 <br>
@@ -38,7 +46,7 @@ Mutes the ambient sounds when a crowd gathers around you,<br>and brings them bac
    https://raw.githubusercontent.com/NeonGhostCinnamon/WillOPlugins/HEAD/repo.json
    ```
 
-3. Type `/xlplugins` and install [**Will-o-Patchwisp**](https://github.com/NeonGhostCinnamon/WillOPatchwisp) and/or [**Will-o-Muter**](https://github.com/NeonGhostCinnamon/WillOMuter).
+3. Type `/xlplugins` and install any of [**Will-o-Patchwisp**](https://github.com/NeonGhostCinnamon/WillOPatchwisp), [**Will-o-Muter**](https://github.com/NeonGhostCinnamon/WillOMuter) and [**Will-o-Bars**](https://github.com/NeonGhostCinnamon/WillOBars).
 
 <br>
 
