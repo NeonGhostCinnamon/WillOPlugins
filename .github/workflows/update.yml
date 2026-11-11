@@ -1,8 +1,7 @@
 # Combines the repo.json of every plugin listed in sources.json into one repo.json,
 # so a single custom repository URL in Dalamud installs all of them.
-# Each plugin's release workflow starts this right after a release (needs the PLUGIN_LIST_TOKEN secret
-# in the plugin repo). The schedule is only a backup: GitHub often runs scheduled jobs hours late.
-# You can also press "Run workflow" on the Actions tab.
+# Runs on a 30-minute schedule (GitHub often runs scheduled jobs hours late), and whenever you press
+# "Run workflow" on the Actions tab.
 name: Update plugin list
 
 on:
