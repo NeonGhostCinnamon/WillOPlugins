@@ -1,6 +1,8 @@
 # Combines the repo.json of every plugin listed in sources.json into one repo.json,
 # so a single custom repository URL in Dalamud installs all of them.
-# Runs every 30 minutes, and whenever you press "Run workflow" on the Actions tab.
+# Each plugin's release workflow starts this right after a release (needs the PLUGIN_LIST_TOKEN secret
+# in the plugin repo). The schedule is only a backup: GitHub often runs scheduled jobs hours late.
+# You can also press "Run workflow" on the Actions tab.
 name: Update plugin list
 
 on:
@@ -10,9 +12,15 @@ on:
   push:
     paths:
       - sources.json
+      - .github/workflows/update.yml
 
 permissions:
   contents: write
+
+# One run at a time, so runs started by several plugin releases at once don't push over each other.
+concurrency:
+  group: update-plugin-list
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -23,8 +31,14 @@ jobs:
 
       - name: Merge the plugin lists
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ github.event.repository.default_branch }}
         run: |
           set -e
+          # Start from the newest commit, in case another run pushed while this one was waiting.
+          git fetch origin "$BRANCH"
+          git checkout -B "$BRANCH" "origin/$BRANCH"
           [ -f repo.json ] || echo '[]' > repo.json
           mkdir -p parts
           i=0
@@ -32,7 +46,16 @@ jobs:
             i=$((i+1))
             name=$(echo "$src" | jq -r '.InternalName')
             url=$(echo "$src" | jq -r '.Url')
-            if curl -fsSL --retry 3 --retry-delay 5 "$url" -o "parts/$i.json" && jq -e 'type == "array"' "parts/$i.json" > /dev/null; then
+            # raw.githubusercontent.com caches files for 5 minutes, so right after a release it can still
+            # hand out the old repo.json. Read the file through the GitHub API instead, which is never stale.
+            api=$(echo "$url" | sed -nE 's#^https://raw\.githubusercontent\.com/([^/]+)/([^/]+)/HEAD/(.+)$#https://api.github.com/repos/\1/\2/contents/\3#p')
+            ok=false
+            if [ -n "$api" ] && curl -fsSL --retry 3 --retry-delay 5 -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github.raw" "$api" -o "parts/$i.json"; then
+              ok=true
+            elif curl -fsSL --retry 3 --retry-delay 5 "$url" -o "parts/$i.json"; then
+              ok=true
+            fi
+            if $ok && jq -e 'type == "array"' "parts/$i.json" > /dev/null; then
               echo "Fetched $name"
             else
               # Couldn't fetch it right now: keep the entry we already had, so the plugin doesn't disappear.
