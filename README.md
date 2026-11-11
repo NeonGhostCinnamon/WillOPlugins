@@ -17,17 +17,11 @@ I've created these plugins for my own use, but figured I might as well release t
 
 One plugin list link for all of my FFXIV Dalamud plugins: add it once, and every Will-o plugin shows up in your plugin installer.
 
-<details>
-<summary><b>The plugins</b></summary>
-<br>
-
 <table>
 <tr><td><a href="https://github.com/NeonGhostCinnamon/WillOBars"><img src="https://raw.githubusercontent.com/NeonGhostCinnamon/WillOBars/HEAD/images/icon.png" alt="Will-o-Bars icon" width="72"></a></td><td><b><a href="https://github.com/NeonGhostCinnamon/WillOBars">Will-o-Bars</a></b><br>Shows or hides each hotbar by your own rules: job, combat, weapon drawn, mounted, crafting or gathering, duty type, zone, weather, city or sanctuary, and party. Combine conditions with "and"/"or", add "if, else" cases, keep a bar separate per job, and restore earlier hotbar backups. <code>/willobars</code></td></tr>
 <tr><td><a href="https://github.com/NeonGhostCinnamon/WillOMuter"><img src="https://raw.githubusercontent.com/NeonGhostCinnamon/WillOMuter/HEAD/images/icon.png" alt="Will-o-Muter icon" width="72"></a></td><td><b><a href="https://github.com/NeonGhostCinnamon/WillOMuter">Will-o-Muter</a></b><br>Mutes certain people, emotes and crowd noise. Put players on a MuteList (their emotes, footsteps and skill sounds), keep friends safe on a WhiteList, mute whole races or genders, pick emotes to mute for everyone, and quiet the ambient sounds when a crowd gathers. Add people by right-clicking them, also in Chat 2. <code>/willomuter</code></td></tr>
 <tr><td><a href="https://github.com/NeonGhostCinnamon/WillOPatchwisp"><img src="https://raw.githubusercontent.com/NeonGhostCinnamon/WillOPatchwisp/HEAD/images/icon.png" alt="Will-o-Patchwisp icon" width="72"></a></td><td><b><a href="https://github.com/NeonGhostCinnamon/WillOPatchwisp">Will-o-Patchwisp</a></b><br>Shows what changed after your plugins update, with clickable links and older updates from GitHub. Checks all your plugin lists for new versions and lets you pick which ones to update, right from the window. <code>/patchwisp</code></td></tr>
 </table>
-
-</details>
 
 ## How to install
 
