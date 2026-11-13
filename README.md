@@ -5,7 +5,8 @@
 <br><br>
 
 <a href="#how-to-install"><img src="images/readme/btn-install.svg" alt="Install in Dalamud" height="46"></a>&nbsp;
-<a href="https://ko-fi.com/willocinnamon"><img src="images/readme/btn-kofi.svg" alt="Support me on Ko-fi" height="46"></a>
+<a href="https://ko-fi.com/willocinnamon"><img src="images/readme/btn-kofi.svg" alt="Support me on Ko-fi" height="46"></a>&nbsp;
+<a href="https://discord.gg/9Zgb3xyNst"><img src="images/readme/btn-discord.svg" alt="Join the Discord" height="46"></a>
 
 </div>
 
